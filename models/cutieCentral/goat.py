@@ -1,8 +1,8 @@
 from datetime import date
 
-class Cow:
+class Goat:
 
-    def __init__(self, name, species, shift, food):
+    def __init__(self, name, species, shift,food):
         # Establish the properties of each animal
         # with a default value
         self.name = name
@@ -15,8 +15,7 @@ class Cow:
         
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-        
-purple = Cow("Purple", "cow", "morning", "cow feed")
-
-print(purple.feed())
-
+    def __str__(self):
+        return f"{self.name} is a {self.species}." 
+    
+lil_lady = Goat("Lil Lady", "goat", "midday", "goat feed")

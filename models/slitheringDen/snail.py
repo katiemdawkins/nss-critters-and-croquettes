@@ -1,19 +1,17 @@
 from datetime import date
-
-class Pig:
-
-    def __init__(self, name, species, shift,food):
-        # Establish the properties of each animal
-        # with a default value
+        
+class Snail:
+    def __init__(self, name, species,food):
         self.name = name
         self.species = species
         self.date_added = date.today()
-        self.walking = True
-        self.shift =shift
+        self.slithering = True
         self.food = food
     
         
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-        
-mizz_piggy= Pig("Mizz Piggy", "pig", "morning", "slop")
+    def __str__(self):
+        return f"{self.name} is a {self.species}."     
+lil_guy= Snail("Lil Guy","snail", "snail gruel")
+print(lil_guy.feed())

@@ -1,15 +1,16 @@
 from datetime import date
-        
-class Goldfish:
-    def __init__(self, name, species,food):
+
+class Lizard:
+    def __init__(self, name, species, food):
         self.name = name
         self.species = species
         self.date_added = date.today()
-        self.swimming = True
+        self.walking = True
         self.food = food
     
         
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-        
-susan = Goldfish("Susan", "goldfish", "fish food")
+    def __str__(self):
+        return f"{self.name} is a {self.species}."     
+green_guy = Lizard("Green Guy","lil lizard", "flies")

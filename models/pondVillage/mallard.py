@@ -1,6 +1,8 @@
 from datetime import date
-        
-class Swan:
+
+from models.animals import PettingZoo
+
+class Mallard:
     def __init__(self, name, species, food):
         self.name = name
         self.species = species
@@ -11,5 +13,10 @@ class Swan:
         
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    def __str__(self):
+        return f"{self.name} is a {self.species}."    
 
-lucy = Swan("Lucy", "swan", "swan kibble")
+larry = Mallard("Larry", "duck", "duck foodz")
+
+pond_village = PettingZoo("Pond Village")
+pond_village.animals.append(larry)

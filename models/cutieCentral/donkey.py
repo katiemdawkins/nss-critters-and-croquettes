@@ -1,16 +1,20 @@
 from datetime import date
-class Fish:
-    
-    def __init__(self, name, species, food):
+
+class Donkey:
+
+    def __init__(self, name, species, shift, food):
         # Establish the properties of each animal
         # with a default value
         self.name = name
         self.species = species
         self.date_added = date.today()
-        self.swimming = True
+        self.walking = True
+        self.shift = shift
         self.food = food
     
         
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-blue_guy = Fish("Blue Guy", "fish", "fish food")
+    def __str__(self):
+        return f"{self.name} is a {self.species}." 
+mr_donkey = Donkey("Mr Donkey", "donkey", "afternoon", "grain") 

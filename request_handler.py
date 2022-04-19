@@ -64,66 +64,8 @@ class HandleRequests(BaseHTTPRequestHandler):
                         'X-Requested-With, Content-Type, Accept')
         self.end_headers()
         
-    def do_GET(self):
-        """Handles GET requests to the server
-        """
-        self._set_headers(200)
-        response = {}  # Default response
-        
-        parsed = self.parse_url(self.path)
-        # Parse the URL and capture the tuple that is returned
-        if len(parsed)== 2:
-            (resource, id) = parsed
 
     
-
-            
-        # This weird code sends a response back to the client
-        self.wfile.write(f"{response}".encode())
-
-    # Here's a method on the class that overrides the parent's method.
-    # It handles any POST request.
-    def do_POST(self):
-        """Handles POST requests to the server
-        """
-        # Set response code to 'Created'
-        self._set_headers(201)
-
-        content_len = int(self.headers.get('content-length', 0))
-        post_body = self.rfile.read(content_len)
-        
-        post_body = json.loads(post_body)
-        
-        (resource, id) = self.parse_url(self.path)
-
-            
-            #self.wfile.write(f"{new_entry}".encode())
-
-    # Here's a method on the class that overrides the parent's method.
-    # It handles any PUT request.
-
-    def do_PUT(self):
-        """Handles PUT requests to the server
-        """
-        content_len = int(self.headers.get('content-length', 0))
-        post_body = self.rfile.read(content_len)
-        post_body = json.loads(post_body)
-
-        # Parse the URL
-        (resource, id) = self.parse_url(self.path)
-
-        success = False
-        
-        
-            
-        self.wfile.write("".encode())   
-
-    def do_DELETE(self):
-        self._set_headers(204)
-        (resource, id) = self.parse_url(self.path)
-        
-        
-            #self.wfile.write("".encode())      
 
 def main():
     """Starts the server on port 8088 using the HandleRequests class
