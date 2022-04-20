@@ -1,4 +1,4 @@
-from animals import Animal
+from models.animals import Animal
 
 # Designate Llama as a child class by adding (Animal) after the class name
 
@@ -10,6 +10,6 @@ class Llama(Animal):
         self.shift = shift # stays on Llama because not all animals have shifts
         self.walking = True
          
-miss_fuzz = Llama("Miss Fuzz", "Llama", "midday", "llama chow")
+miss_fuzz = Llama("Miss Fuzz", "Llama", "midday", "llama chow", 1235)
 
 print(f'{miss_fuzz.name} is a {miss_fuzz.species}')

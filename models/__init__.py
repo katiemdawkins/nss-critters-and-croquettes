@@ -12,4 +12,4 @@ from .pondVillage.mallard import Mallard
 from .pondVillage.goldfish import Goldfish
 from .pondVillage.swan import Swan
 from .slitheringDen.snail import Snail
-
+from .animals import Animal
