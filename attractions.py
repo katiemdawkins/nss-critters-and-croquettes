@@ -18,6 +18,10 @@ class SnakePit:
         
     def add_animal(self, new_animal):
         self.animals.append(new_animal)
+    
+    @property #getter
+    def last_critter_added(self):
+        return self.animals[-1]
         
 class PettingZoo:
     def __init__(self, name):

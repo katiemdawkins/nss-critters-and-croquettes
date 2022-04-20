@@ -36,9 +36,9 @@ pond_village.animals.append(lucy)
 freddy = Turtle("Freddy", "turtle", "flies")
 pond_village.animals.append(freddy)
 
+print(f'{pond_village.attraction_name} is where you can find {pond_village.description}, like')
 for animal in pond_village.animals:
-    print(f'You can find {animal.name} the {animal.species} in {pond_village.attraction_name}')
-    
+    print(f'* {animal.name} the {animal.species}')
 #------------------------------------------Slither Inn----------------------
 slither_inn = SnakePit("Slither Inn")
 
@@ -49,14 +49,16 @@ snakey= Snake("Snakey", "copperhead", "rats")
 slither_inn.add_animal(green_guy)
 slither_inn.add_animal(lil_guy)
 slither_inn.add_animal(snakey)
+print(slither_inn.last_critter_added)
 
+print(f'{slither_inn.attraction_name} is where you can find {slither_inn.description}, like') 
 for animal in slither_inn.animals:
-    print(f'You can find {animal.name} the {animal.species} in {slither_inn.attraction_name}')
-
+    print(f'*{animal.name} the {animal.species}')
+    
 #------------------------------------------Petting Zoo----------------------
 critter_city = PettingZoo("Critter City")
 
-purple = Cow("Purple", "cow", "morning", "cow feed")
+purple = Cow("Purple", "cow", "morning", "cow feed", 1234)
 mr_donkey = Donkey("Mr Donkey", "donkey", "afternoon", "grain") 
 lil_lady = Goat("Lil Lady", "goat", "midday", "goat feed")
 lionel = Hamster("Lionel", "hamster", "hamster kibble bits")
@@ -69,6 +71,7 @@ critter_city.add_animal(lil_lady)
 critter_city.add_animal(lionel)
 critter_city.add_animal(miss_fuzz)
 critter_city.add_animal(mizz_piggy)
-
-for animal in critter_city.animals:
-    print(f'You can find {animal.name} the {animal.species} in {critter_city.attraction_name}')
+    
+print(f'{critter_city.attraction_name} is where you can find {critter_city.description}, like')
+for animal in critter_city.animals: 
+    print(f'*{animal.name} the {animal.species}')
