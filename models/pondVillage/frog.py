@@ -1,7 +1,5 @@
 from datetime import date
 
-from models.animals import PettingZoo
-
 class Frog:
 
     def __init__(self, name, species, food):
@@ -21,5 +19,4 @@ class Frog:
         
 froggy = Frog("Froggy", "frog", "flies")
 
-pond_village = PettingZoo("Pond Village")
-pond_village.animals.append(froggy)
+
