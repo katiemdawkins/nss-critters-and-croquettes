@@ -9,6 +9,13 @@ class Wetlands:
         self.description = "zen critters of the wetlands to chill with"
         self.animals = list()
         
+    def add_animal(self, new_animal):
+        self.animals.append(new_animal)
+    
+    @property #getter
+    def last_critter_added(self):
+        return self.animals[-1]
+        
 
 class SnakePit:
     def __init__(self, name):
