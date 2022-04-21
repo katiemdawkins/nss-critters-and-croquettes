@@ -1,40 +1,18 @@
+class Attraction:
 
-from smtplib import SMTPRecipientsRefused
-from unicodedata import name
-
-
-class Wetlands:
-    def __init__(self, name):
+    def __init__(self, name, description):
         self.attraction_name = name
-        self.description = "zen critters of the wetlands to chill with"
+        self.description = description
         self.animals = list()
-        
-    def add_animal(self, new_animal):
-        self.animals.append(new_animal)
-    
-    @property #getter
-    def last_critter_added(self):
-        return self.animals[-1]
-        
 
-class SnakePit:
-    def __init__(self, name):
-        self.attraction_name = name
-        self.description = "slithering doodads and doodaas to view"
-        self.animals = list()
-        
     def add_animal(self, new_animal):
         self.animals.append(new_animal)
-    
-    @property #getter
-    def last_critter_added(self):
-        return self.animals[-1]
-        
-class PettingZoo:
-    def __init__(self, name):
-        self.attraction_name = name
-        self.description = "cute and fuzzy critters to cuddle"
-        self.animals =list()
-        
-    def add_animal(self, new_animal):
-        self.animals.append(new_animal)
+
+    def remove_animal(self, animal):
+        self.animals.remove(animal)
+
+    def __str__(self):
+        return f'{self.name} ({len(self)} animals)'
+
+    def __len__(self):
+        return len(self.animals)

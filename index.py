@@ -1,4 +1,6 @@
-from attractions.attractions import PettingZoo, SnakePit, Wetlands
+from attractions import PettingZoo
+from attractions import SnakePit
+from attractions import Wetlands
 from animals.cow import Cow
 from animals.donkey import Donkey
 from animals.goat import Goat
@@ -16,7 +18,7 @@ from animals.snail import Snail
 from animals.snake import Snake
 
 #------------------------------------------Pond Village----------------------
-pond_village = Wetlands("Pond Village")
+pond_village = Wetlands("Pond Village", "water lovin critters")
 
 blue_guy = Fish("Blue Guy", "fish", "fish food", 11)
 
@@ -40,7 +42,7 @@ print(f'{pond_village.attraction_name} is where you can find {pond_village.descr
 for animal in pond_village.animals:
     print(f'* {animal.name} the {animal.species}')
 #------------------------------------------Slither Inn----------------------
-slither_inn = SnakePit("Slither Inn")
+slither_inn = SnakePit("Slither Inn", "slithering critters")
 
 green_guy = Lizard("Green Guy","lil lizard", "flies", 999)
 lil_guy= Snail("Lil Guy","snail", "snail gruel", 777)
@@ -49,14 +51,13 @@ snakey= Snake("Snakey", "copperhead", "rats", 888)
 slither_inn.add_animal(green_guy)
 slither_inn.add_animal(lil_guy)
 slither_inn.add_animal(snakey)
-print(f'{slither_inn.last_critter_added}')
 
 print(f'{slither_inn.attraction_name} is where you can find {slither_inn.description}, like') 
 for animal in slither_inn.animals:
     print(f'*{animal.name} the {animal.species}')
     
 #------------------------------------------Petting Zoo----------------------
-critter_city = PettingZoo("Critter City")
+critter_city = PettingZoo("Critter City", "cuddly critters")
 
 purple = Cow("Purple", "cow", "morning", "cow feed", 1234)
 mr_donkey = Donkey("Mr Donkey", "donkey", "afternoon", "grain", 333) 
@@ -75,3 +76,8 @@ critter_city.add_animal(mizz_piggy)
 print(f'{critter_city.attraction_name} is where you can find {critter_city.description}, like')
 for animal in critter_city.animals: 
     print(f'*{animal.name} the {animal.species}')
+    
+trixie = Swan("Trixi", "Graceful Swan", "tuna fish sandwich", 666)
+print (f'{trixie.name}, the {trixie.species}')
+trixie.run()
+trixie.swim()
